@@ -31,26 +31,24 @@ a {
     color: darkblue;
 }
 
-figure {
-    img {
-        width: 20vw;
-    }
-
-    figcaption {
-        span.caption * {
-            font-size: 2vh;
-        }
-
-        span.copyright * {
-            font-size: 1vh;
-        }
-    }
+figure img {
+    width: 20vw;
 }
 
-    body {
-        background-image: url('../images/paper.png');
-    }
+figure figcaption span.caption * {
+    font-size: 2vh;
+}
 
-    main {
-        max-width: 119ch;
-    }
+figure figcaption span.copyright * {
+    font-size: 1vh;
+}
+
+
+
+body {
+    background-image: url('../images/paper.png');
+}
+
+main {
+    max-width: 119ch;
+}
