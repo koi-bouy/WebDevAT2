@@ -12,6 +12,7 @@ h1 {
     font-size: 5vh;
     color: darkblue;
     text-align: center;
+    font-weight:bold;
 }
 
 h2 {
@@ -19,6 +20,7 @@ h2 {
     color: darkblue;
     padding-left: 1vw;
     padding-top: 2vw;
+    font-weight: bold;
 }
 
 p {
