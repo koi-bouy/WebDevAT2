@@ -1,7 +1,56 @@
-body {
-    background-image: url('../images/paper.png');
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 3vh;
+    font-weight: normal;
+    color: black;
 }
 
-main {
-    max-width: 119ch;
+h1 {
+    font-size: 5vh;
+    color: darkblue;
+    text-align: center;
 }
+
+h2 {
+    font-size: 4vh;
+    color: darkblue;
+    padding-left: 1vw;
+    padding-top: 2vw;
+}
+
+p {
+    padding-left: 2vw;
+    padding-top: 1vw;
+}
+
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+figure {
+    img {
+        width: 20vw;
+    }
+
+    figcaption {
+        span.caption * {
+            font-size: 2vh;
+        }
+
+        span.copyright * {
+            font-size: 1vh;
+        }
+    }
+}
+
+    body {
+        background-image: url('../images/paper.png');
+    }
+
+    main {
+        max-width: 119ch;
+    }
