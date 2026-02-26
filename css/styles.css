@@ -8,11 +8,15 @@
     color: black;
 }
 
+body {
+    background-image: url('../images/paper.png');
+}
+
 h1 {
     font-size: 5vh;
     color: darkblue;
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 h2 {
@@ -47,10 +51,36 @@ figure figcaption span.copyright * {
 
 
 
-body {
-    background-image: url('../images/paper.png');
+
+@media (min-width: 1800px) {}
+
+header {
+    flex: 8vh;
+}
+
+nav {
+    height: 6vh;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    width: 20vw;
 }
 
 main {
-    max-width: 119ch;
+    width: 80vw;
+}
+
+footer {
+    margin-top : 2vh;
+}
+footer * {
+    text-align: center;
+    font-size: 1.5vh;
+
 }
