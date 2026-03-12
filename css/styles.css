@@ -51,15 +51,19 @@ figure figcaption span.copyright * {
 
 
 
+/* disable the aside when  */
+@media (max-width: 800px) {
+    aside {
+        display: none;
+    }
 
-@media (min-width: 1800px) {}
+    main {
+        flex: 100vw;
+    }
 
-header {
-    flex: 8vh;
 }
 
 nav {
-    height: 6vh;
     text-align: center;
 }
 
@@ -68,19 +72,38 @@ nav {
     flex-direction: row;
 }
 
+aside,
+main {
+    box-sizing: border-box;
+    border-width: 3px;
+    border-style: solid;
+}
+
 aside {
-    width: 20vw;
+    flex: 20vw;
+    border-color: hotpink;
 }
 
 main {
-    width: 80vw;
+    flex: 80vw;
+    border-color: cyan;
 }
 
 footer {
-    margin-top : 2vh;
+    margin-top: 2vh;
 }
+
 footer * {
     text-align: center;
     font-size: 1.5vh;
 
+}
+
+table {
+    border: 1px red solid;
+}
+
+a.sourceLink {
+    font-style: italic;
+    font-size: small;
 }
