@@ -8,6 +8,10 @@
     color: black;
 }
 
+strong {
+    font-weight: bold;
+}
+
 body {
     background-image: url('../images/paper.png');
 }
@@ -52,10 +56,12 @@ figure figcaption span.copyright * {
 
 
 /* disable the aside when  */
-@media (max-width: 800px) {
+@media (orientation: portrait) {
     aside {
         display: none;
     }
+
+
 
     main {
         flex: 100vw;
@@ -64,8 +70,16 @@ figure figcaption span.copyright * {
 }
 
 nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    background: rgba(46, 139, 86, 0.5);
 }
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
 
 .container {
     display: flex;
@@ -99,8 +113,43 @@ footer * {
 
 }
 
-table {
-    border: 1px red solid;
+ul.minerals {
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+ul.minerals li {
+    padding-bottom: 1vw;
+}
+
+.companies {
+    border: 1px solid green;
+}
+
+
+.companies tr:nth-child(even) {
+    background-color: lightgreen;
+}
+
+.companies tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+.companies td {
+    padding: 0px 0.25vw;
+}
+
+.companies td:hover {
+    background-color: rgba(119, 69, 69, 0.25);
+}
+
+.companies th {
+    padding: 0.5vw;
+    background-color: green;
+    color: white;
+    text-align: left;
+
+
 }
 
 a.sourceLink {
