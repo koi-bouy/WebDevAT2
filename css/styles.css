@@ -41,6 +41,7 @@ a {
     color: darkblue;
 }
 
+/* aside map */
 figure img {
     width: 20vw;
 }
@@ -55,13 +56,11 @@ figure figcaption span.copyright * {
 
 
 
-/* disable the aside when  */
+/* disable the aside when  viewed in portrait mode, such as from a phone */
 @media (orientation: portrait) {
     aside {
         display: none;
     }
-
-
 
     main {
         flex: 100vw;
@@ -69,6 +68,7 @@ figure figcaption span.copyright * {
 
 }
 
+/* navigation bar */
 nav {
     display: flex;
     justify-content: center;
@@ -81,11 +81,14 @@ nav a:hover {
 }
 
 
+/**/
 .container {
     display: flex;
     flex-direction: row;
 }
 
+
+/* Borders for main and aside sections */
 aside,
 main {
     box-sizing: border-box;
@@ -103,6 +106,8 @@ main {
     border-color: cyan;
 }
 
+
+/* style footer for AI Usage disclaimers */
 footer {
     margin-top: 2vh;
 }
@@ -113,15 +118,18 @@ footer * {
 
 }
 
-ul.minerals {
+/* restore padding/indentation for Unordered Lists */
+ul {
     padding-left: 4vw;
     padding-right: 4vw;
 }
 
-ul.minerals li {
+/* inserts gaps between mineral list entries */
+.mining li {
     padding-bottom: 1vw;
 }
 
+/* styling for the company table */
 .companies {
     border: 1px solid green;
 }
@@ -152,6 +160,7 @@ ul.minerals li {
 
 }
 
+/* custom source link */
 a.sourceLink {
     font-style: italic;
     font-size: small;
