@@ -12,8 +12,13 @@ strong {
     font-weight: bold;
 }
 
+
 body {
-    background-image: url('../images/paper.png');
+    background-image: url('../images/matthew-de-livera-4Gf51uY0YQE-unsplash.jpg');
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -68,15 +73,37 @@ figure figcaption span.copyright * {
 
 }
 
-/* navigation bar */
-nav {
+header {
+    height: 8vh;
+}
+
+/* Class for centering elements in containers */
+.center {
     display: flex;
     justify-content: center;
-    gap: 1vw;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* navigation bar */
+nav {
     background: rgba(46, 139, 86, 0.5);
 }
 
-nav a:hover {
+.navbar {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+
+.navbar li {
+    padding: 1.5vh 3vw;
+}
+
+
+.navbar li:hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
@@ -85,6 +112,7 @@ nav a:hover {
 .container {
     display: flex;
     flex-direction: row;
+    background-color: rgba(200, 255, 223, 60%);
 }
 
 
@@ -109,16 +137,18 @@ main {
 
 /* style footer for AI Usage disclaimers */
 footer {
-    margin-top: 2vh;
+    padding-top: 2vh;
+    background-color: rgba(240, 248, 255, 0.5);
 }
 
 footer * {
     text-align: center;
     font-size: 1.5vh;
+    font-weight: 555;
 
 }
 
-/* restore padding/indentation for Unordered Lists */
+/* add padding/indentation for Unordered Lists */
 ul {
     padding-left: 4vw;
     padding-right: 4vw;
