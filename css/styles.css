@@ -15,7 +15,6 @@ strong {
 
 body {
     background-image: url('../images/matthew-de-livera-4Gf51uY0YQE-unsplash.jpg');
-    background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -61,17 +60,6 @@ figure figcaption span.copyright * {
 
 
 
-/* disable the aside when  viewed in portrait mode, such as from a phone */
-@media (orientation: portrait) {
-    aside {
-        display: none;
-    }
-
-    main {
-        flex: 100vw;
-    }
-
-}
 
 header {
     height: 8vh;
@@ -125,15 +113,26 @@ main {
 }
 
 aside {
-    flex: 20vw;
+    flex-basis: 20vw;
     border-color: hotpink;
 }
 
 main {
-    flex: 80vw;
+    flex-basis: 80vw;
     border-color: cyan;
 }
 
+/* disable the aside when  viewed in portrait mode, such as from a phone */
+@media (orientation: portrait) {
+    aside {
+        display: none;
+    }
+
+    main {
+        flex: 100vw;
+    }
+
+}
 
 /* style footer for AI Usage disclaimers */
 footer {
