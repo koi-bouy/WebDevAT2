@@ -66,6 +66,7 @@ header {
 }
 
 /* Class for centering elements in containers */
+header,
 .center {
     display: flex;
     justify-content: center;
