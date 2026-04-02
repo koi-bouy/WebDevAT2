@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+    <title>Mining Equipment</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        iframe {
+            width: 20vw;
+            height: 15vw;
+        }
+
+
+        @media (orientation: portrait) {
+            .container {
+                flex-direction: column;
+            }
+
+            aside {
+                display: block;
+
+            }
+
+            iframe {
+                height: 30vh;
+            }
+
+            main {
+                flex-basis: 80vw;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mining in Western Australia</h1>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="minerals.htm">Minerals</a></li>
+            <li><a href="companies.htm">Companies</a></li>
+            <li><a href="equipment.htm">Equipment</a></li>
+            <li><a href="contact.htm">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="center">
+            <iframe name="currequip" id="equippic" src="iframe.htm">
+            </iframe>
+        </aside>
+
+        <main>
+            <h2>Equipment used for mining in WA</h2>
+            <ul>
+                <li><a href="images/haulpak_img.htm" target="currequip">Haulpak</a></li>
+                <li><a href="images/drill_img.htm" target="currequip">Drilling Rig</a></li>
+                <li><a href="images/scraper_img.htm" target="currequip">Scraper</a></li>
+            </ul>
+        </main>
+    </div>
+
+    <footer>
+        <p>
+            Background photo by <a
+                href="https://unsplash.com/@matthewdelivera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Matthew de Livera
+            </a>
+            on
+            <a
+                href="https://unsplash.com/photos/a-view-of-a-large-open-pit-in-the-middle-of-nowhere-4Gf51uY0YQE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Unsplash
+            </a>
+            <br>
+            All page code is the work of Raphael Fernandes.
+        </p>
+    </footer>
+</body>
+
+</html>

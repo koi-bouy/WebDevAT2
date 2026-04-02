@@ -71,6 +71,7 @@ header,
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     flex-direction: column;
 }
 
@@ -158,7 +159,8 @@ footer * {
 
 }
 
-/* add padding/indentation for Unordered Lists */
+/* add padding/indentation for Lists */
+ol,
 ul {
     padding-left: 4vw;
     padding-right: 4vw;
@@ -203,11 +205,23 @@ ul {
 /* custom source link */
 a.sourceLink {
     font-style: italic;
-    font-size: small;
+    font-size: smaller;
 }
 
 video {
     width: 19.5vw;
     border: 0.25vw rgba(0, 128, 0, 50%) solid;
     border-radius: 20px;
+}
+
+
+img.equip {
+    width: 96vw;
+}
+
+
+.embed {
+    background-image: none;
+    background-color: transparent;
+    height: 100vh
 }
