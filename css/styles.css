@@ -234,13 +234,13 @@ img.equip {
 
 
 #equippic {
-    width: 20vw;
-    height: 15vw;
+    width: 100%;
 }
 
 
 /*  As the aside is the main attraction of the equipment page, so it shouldn't
-    hide it on phones but instead display above/under the main 
+    hide it on phones but instead display above/under the main
+    if this isn't allowed, i can just delete this section  
 */
 @media (orientation: portrait) {
     .container.equip {
@@ -261,5 +261,3 @@ img.equip {
         flex-basis: auto;
     }
 }
-
-@media (orientation: landscape) {}
