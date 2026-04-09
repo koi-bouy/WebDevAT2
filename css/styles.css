@@ -231,3 +231,32 @@ img.equip {
     background-color: transparent;
     height: 100vh
 }
+
+
+#equippic {
+    width: 20vw;
+    height: 15vw;
+}
+
+
+/* As the aside is the main attraction of this page, don't hide it on phones 
+        but instead display above the main */
+@media (orientation: portrait) {
+    .container.equip {
+        flex-direction: column;
+    }
+
+    aside.equip {
+        display: block;
+
+    }
+
+    iframe.equip {
+        height: 35vw;
+
+    }
+
+    main.equip {
+        flex-basis: 80vw;
+    }
+}
