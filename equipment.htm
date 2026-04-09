@@ -6,36 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        iframe {
-            width: 20vw;
-            height: 15vw;
-        }
 
-
-        /* As the aside is the main attraction of this page, don't hide it on phones 
-        but instead display above the main */
-        @media (orientation: portrait) {
-            .container {
-                flex-direction: column;
-            }
-
-            aside {
-                display: block;
-
-            }
-
-            iframe {
-                height: 35vw;
-
-            }
-
-            main {
-                flex-basis: 80vw;
-            }
-
-        }
-    </style>
 </head>
 
 <body>
@@ -51,18 +22,18 @@
             <li><a href="contact.htm">Contact</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <aside class="center">
-            <iframe name="currequip" id="equippic" src="iframe.htm">
+    <div class="container equip">
+        <aside class="center equip">
+            <iframe name="currequip" title="Equipment Image Viewer" id="equippic" src="iframecontent/temp.htm">
             </iframe>
         </aside>
 
-        <main>
+        <main class="equip">
             <h2>Equipment used for mining in WA</h2>
             <ul>
-                <li><a href="images/haulpak_img.htm" target="currequip">Haulpak</a></li>
-                <li><a href="images/drill_img.htm" target="currequip">Drilling Rig</a></li>
-                <li><a href="images/scraper_img.htm" target="currequip">Scraper</a></li>
+                <li><a href="iframecontent/haulpak_img.htm" target="currequip">Haulpak</a></li>
+                <li><a href="iframecontent/drill_img.htm" target="currequip">Drilling Rig</a></li>
+                <li><a href="iframecontent/scraper_img.htm" target="currequip">Scraper</a></li>
             </ul>
         </main>
     </div>
