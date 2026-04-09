@@ -1,4 +1,11 @@
 * {
+    /*
+        Set box-sizing property to border-box, which c
+        causes height/width to change overall size of 
+        element, from border to border, rather than
+        the inner content.
+    */
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
     border: 0px;
@@ -47,7 +54,7 @@ a {
 
 /* aside map */
 figure img {
-    width: 20vw;
+    width: 100%;
 }
 
 figure figcaption span.caption * {
@@ -109,7 +116,6 @@ nav {
 /* Borders for main and aside sections */
 aside,
 main {
-    box-sizing: border-box;
     border-width: 3px;
     border-style: solid;
 }
@@ -209,7 +215,7 @@ a.sourceLink {
 }
 
 video {
-    width: 19.5vw;
+    width: 100%;
     border: 0.25vw rgba(0, 128, 0, 50%) solid;
     border-radius: 20px;
 }
