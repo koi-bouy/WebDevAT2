@@ -239,24 +239,27 @@ img.equip {
 }
 
 
-/* As the aside is the main attraction of this page, don't hide it on phones 
-        but instead display above the main */
+/*  As the aside is the main attraction of the equipment page, so it shouldn't
+    hide it on phones but instead display above/under the main 
+*/
 @media (orientation: portrait) {
     .container.equip {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
-    aside.equip {
-        display: block;
+    #equippic {
+        height: 100%;
+        width: 80%;
 
     }
 
-    iframe.equip {
-        height: 35vw;
-
+    aside {
+        flex-basis: 60vw;
     }
 
     main.equip {
-        flex-basis: 80vw;
+        flex-basis: auto;
     }
 }
+
+@media (orientation: landscape) {}
