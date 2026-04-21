@@ -21,7 +21,7 @@ strong {
 
 
 body {
-    background-image: url('../images/matthew-de-livera-4Gf51uY0YQE-unsplash.jpg');
+    background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -74,7 +74,9 @@ header {
 
 /* Class for centering elements in containers */
 header,
-.center {
+.center,
+/* only load iframe content that is referenced in url */
+.frame:target {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,9 +222,15 @@ video {
     border-radius: 20px;
 }
 
+/* equipment iframe content */
+.frame img {
+    width: 98%;
+}
 
-img.equip {
-    width: 96vw;
+.frame {
+    width: 100vw;
+    display: none;
+    height: min(100vw, 100vh);
 }
 
 
@@ -235,6 +243,7 @@ img.equip {
 
 #equippic {
     width: 100%;
+    height: 16vw;
 }
 
 
@@ -249,7 +258,7 @@ img.equip {
 
     #equippic {
         height: 100%;
-        width: 80%;
+        width: 70%;
 
     }
 
