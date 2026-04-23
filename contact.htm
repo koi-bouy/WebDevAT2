@@ -33,16 +33,25 @@
             <form action="additem.php" method="post">
                 <!-- Input fields -->
                 <!-- name -->
-                <input type="text" name="requestor" id="requestor" value="John Smith">
+                <label for="requestor">Name</label>
+                <br>
+                <input required type="text" name="requestor" id="requestor" value="">
                 <br>
                 <!-- email -->
-                <input type="email" name="email" id="email" value="JSmith@example.com">
+                <label for="email">Email Address</label>
+                <br>
+                <input required type="email" name="email" id="email" value="">
                 <br>
                 <!-- phone-->
-                <input type="tel" name="phone" id="phone" value="0456789123">
+                <label for="phone">Phone Number</label>
+                <br>
+                <input required type="tel" name="phone" id="phone" value="">
                 <br>
                 <!-- request type dropdown-->
-                <select name="infotype" id="infotype">
+                <label for="infotype">Information Type</label>
+                <br>
+                <select required name="infotype" id="infotype">
+                    <option value="" selected hidden>Select an option</option>
                     <option value="company">Company</option>
                     <option value="mineral">Mineral</option>
                     <option value="equipment">Equipment</option>
@@ -50,11 +59,13 @@
                 </select>
                 <br>
                 <!-- textarea for request body-->
+                <label for="request">Request Description</label>
+                <br>
                 <textarea name="request" id="request"></textarea>
                 <br>
                 <!-- submit button -->
                 <br>
-                <input type="submit" value="Submit Request">
+                <input type="submit" class="submit" value="Submit Request">
             </form>
         </main>
     </div>
