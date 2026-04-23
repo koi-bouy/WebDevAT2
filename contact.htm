@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        main {
+            flex: 100vw;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Contact Form</h1>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="minerals.htm">Minerals</a></li>
+            <li><a href="companies.htm">Companies</a></li>
+            <li><a href="equipment.htm">Equipment</a></li>
+            <li><a href="contact.htm">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Centers the company table on the page. -->
+        <main class="center" style="flex-direction: column;">
+            <form action="additem.php" method="post">
+                <!-- Input fields -->
+                <!-- name -->
+                <input type="text" name="requestor" id="requestor" value="John Smith">
+                <br>
+                <!-- email -->
+                <input type="email" name="email" id="email" value="JSmith@example.com">
+                <br>
+                <!-- phone-->
+                <input type="tel" name="phone" id="phone" value="0456789123">
+                <br>
+                <!-- request type dropdown-->
+                <select name="infotype" id="infotype">
+                    <option value="company">Company</option>
+                    <option value="mineral">Mineral</option>
+                    <option value="equipment">Equipment</option>
+
+                </select>
+                <br>
+                <!-- textarea for request body-->
+                <textarea name="request" id="request"></textarea>
+                <br>
+                <!-- submit button -->
+                <br>
+                <input type="submit" value="Submit Request">
+            </form>
+        </main>
+    </div>
+    <footer>
+        <p>
+            Background photo by <a
+                href="https://unsplash.com/@matthewdelivera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Matthew de Livera
+            </a>
+            on
+            <a
+                href="https://unsplash.com/photos/a-view-of-a-large-open-pit-in-the-middle-of-nowhere-4Gf51uY0YQE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Unsplash
+            </a>
+            <br>
+            All page code is the work of Raphael Fernandes.
+        </p>
+    </footer>
+</body>
+
+</html>
