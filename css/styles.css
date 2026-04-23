@@ -270,3 +270,13 @@ video {
         flex-basis: auto;
     }
 }
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: rgb(197, 236, 197);
+}
+
+form * {
+    padding: 3px;
+    border: 300;
+}
