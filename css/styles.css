@@ -15,7 +15,8 @@
     color: black;
 }
 
-strong {
+strong,
+b {
     font-weight: bold;
 }
 
