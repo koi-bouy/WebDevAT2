@@ -87,7 +87,7 @@ header,
 
 /* navigation bar */
 nav {
-    background: rgba(46, 139, 86, 0.5);
+    background: #2e8b5680;
 }
 
 .navbar {
@@ -112,7 +112,7 @@ nav {
 .container {
     display: flex;
     flex-direction: row;
-    background-color: rgba(200, 255, 223, 60%);
+    background-color: #c8ffdf99;
 }
 
 
@@ -158,7 +158,7 @@ main {
 
 /* style footer for AI Usage disclaimers */
 footer {
-    background-color: rgba(240, 248, 255, 0.5);
+    background-color: #f0f8ff80;
 }
 
 footer * {
@@ -199,7 +199,7 @@ ul {
 }
 
 .companies td:hover {
-    background-color: rgba(119, 69, 69, 0.25);
+    background-color: #77454540;
 }
 
 .companies th {
