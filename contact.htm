@@ -12,37 +12,22 @@
         }
     </style>
     <script>
-        function validateInput(e) {
-            // Regular expression to detect script tags
-            const injection = /<\s*(?:\/\s*)?script\b/i;
+        function validate(e) {
+            const input = e.target;
+            const text = input.value.trim();
+            const injection = /<\s*(?:\/\s*)?script\s*?(?:\s[^>]*)?>/i;
 
-            // Get all the text-based input fields for validation
-            let inputs = document.getElementsByClassName("inputfield");
-
-            // Get error message element
-            let err = document.getElementById("err");
-
-            // reset the error message element
-            err.innerText = "";
-
-            // validity flag
-            let valid = true;
-
-            // iterate through input elements
-            for (let input of inputs) {
-                // Test for script tag injection with the regex
-                if (injection.test(input.value)) {
-                    // Show an error message if a script tag is found
-                    err.innerText += "Field \"" + input.name + "\" contains script tag.\n"
-
-                    // invalid
-                    valid = false;
-                }
+            if (text === "") {
+                input.setCustomValidity("Please fill out this field.");
+            } else if (injection.test(text)) {
+                input.setCustomValidity("Oi! No <script> injections!");
             }
-            // Stop submit event to avoid submitting incorrect data
-            if (!valid) {
-                e.preventDefault();
+            else {
+                input.setCustomValidity("");
             }
+
+            input.reportValidity();
+
         }
     </script>
 </head>
@@ -69,16 +54,16 @@
                 <!-- Input fields -->
                 <!-- name -->
                 <label for="requestor">Surname and other names</label>
-                <input class="inputfield" required type="text" name="requestor" id="requestor" value="">
+                <input oninput="validate(event)" type="text" name="requestor" id="requestor" value="">
                 <!-- email -->
                 <label for="email">Contact email Address</label>
-                <input class="inputfield" required type="email" name="email" id="email" value="">
+                <input oninput="validate(event)" type="email" name="email" id="email" value="">
                 <!-- phone-->
                 <label for="phone">Contact phone Number</label>
-                <input class="inputfield" required type="tel" name="phone" id="phone" value="">
+                <input oninput="validate(event)" type="tel" name="phone" id="phone" value="">
                 <!-- request type dropdown-->
                 <label for="infotype">Information Type</label>
-                <select class="inputfield" required name="infotype" id="infotype">
+                <select oninput="validate(event)" name="infotype" id="infotype">
                     <option value="" selected hidden>Select an option</option>
                     <option value="company">Company</option>
                     <option value="mineral">Mineral</option>
@@ -87,7 +72,7 @@
                 </select>
                 <!-- textarea for request body-->
                 <label for="request">Request Description</label>
-                <textarea class="inputfield" name="request" id="request"></textarea>
+                <textarea oninput="val(event)" name="request" id="request"></textarea>
                 <!-- submit button -->
                 <br>
                 <div>
