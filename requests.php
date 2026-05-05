@@ -20,7 +20,7 @@
     </nav>
     <div class="container">
         <main class="center" style="flex-basis:100vw">
-            <table class="table table-striped companies" id="outtable">
+            <table class="striped">
                 <thead>
                     <tr>
                         <th>Request ID</th>
@@ -48,18 +48,30 @@
                         // set the PDO error mode to exception
                         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                        $requestor = $_POST["requestor"];
-                        $email = $_POST["email"];
-                        $phone = $_POST["phone"];
-                        $infotype = $_POST["infotype"];
-                        $request = $_POST["request"];
 
-                        $sql = "INSERT INTO `requests` (requestor,email,phone,infotype,request) VALUES (?,?,?,?,?)";
-                        $stmt = $conn->prepare($sql);
+                        /* only try to add a new request if all input fields are recieved
+                           otherwise just print the request table */
 
-                        if ($stmt->execute([$requestor, $email, $phone, $infotype, $request]) === TRUE) {
-                        } else {
-                            echo "<tr><td>Unable to Insert Error</td></tr>";
+                        if (isset(
+                            $_POST["requestor"],
+                            $_POST["email"],
+                            $_POST["phone"],
+                            $_POST["infotype"],
+                            $_POST["request"]
+                        )) {
+                            $requestor = $_POST["requestor"];
+                            $email = $_POST["email"];
+                            $phone = $_POST["phone"];
+                            $infotype = $_POST["infotype"];
+                            $request = $_POST["request"];
+
+                            $sql = "INSERT INTO `requests` (requestor,email,phone,infotype,request) VALUES (?,?,?,?,?)";
+                            $stmt = $conn->prepare($sql);
+
+                            if ($stmt->execute([$requestor, $email, $phone, $infotype, $request]) === TRUE) {
+                            } else {
+                                echo "<tr><td>Unable to Insert Error</td></tr>";
+                            }
                         }
 
                         try {
