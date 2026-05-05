@@ -13,8 +13,6 @@
     </style>
     <script>
         function validateInput(e) {
-            return true;
-
             // Regular expression to detect script tags
             const injection = /<\s*(?:\/\s*)?script\b/i;
 
@@ -22,7 +20,6 @@
             let inputs = document.getElementsByClassName("inputfield");
 
             // reset the error message element
-
             err.innerText = "";
 
             // validity flag
@@ -30,16 +27,18 @@
 
             // iterate through input elements
             for (let input of inputs) {
-
                 // Test for script tag injection with the regex
                 if (injection.test(input.value)) {
-
                     // Show an error message if a script tag is found
                     err.innerText += "Field \"" + input.name + "\" contains script tag.\n"
 
-                    // Stop submit event to avoid submitting incorrect data
-                    e.preventDefault();
+                    // invalid
+                    valid = false;
                 }
+            }
+            // Stop submit event to avoid submitting incorrect data
+            if (!valid) {
+                e.preventDefault();
             }
         }
     </script>
