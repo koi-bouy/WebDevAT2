@@ -4,18 +4,51 @@
 <head>
     <title>Contact Us</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         main {
             flex: 100vw;
         }
     </style>
+    <script>
+        function validateInput(e) {
+            return true;
+
+            // Regular expression to detect script tags
+            const injection = /<\s*(?:\/\s*)?script\b/i;
+
+            // Get all the text-based input fields for validation
+            let inputs = document.getElementsByClassName("inputfield");
+
+            // reset the error message element
+
+            err.innerText = "";
+
+            // validity flag
+            let valid = true;
+
+            // iterate through input elements
+            for (let input of inputs) {
+
+                // Test for script tag injection with the regex
+                if (injection.test(input.value)) {
+
+                    // Show an error message if a script tag is found
+                    err.innerText += "Field \"" + input.name + "\" contains script tag.\n"
+
+                    // Stop submit event to avoid submitting incorrect data
+                    e.preventDefault();
+                }
+            }
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
-        <h1>Contact Form</h1>
+        <h1 id="pageTitle">Contact Form</h1>
     </header>
     <nav>
         <ul class="navbar">
@@ -29,43 +62,40 @@
 
     <div class="container">
         <!-- Centers the company table on the page. -->
-        <main class="center" style="flex-direction: column;">
-            <form action="additem.php" method="post">
+        <main class="center">
+            <form onsubmit="validateInput(event)" action="requests.php" method="post">
+                <span id="err"></span>
                 <!-- Input fields -->
                 <!-- name -->
                 <label for="requestor">Surname and other names</label>
-                <br>
-                <input required type="text" name="requestor" id="requestor" value="">
-                <br>
+                <input class="inputfield" required type="text" name="requestor" id="requestor" value="">
                 <!-- email -->
                 <label for="email">Contact email Address</label>
-                <br>
-                <input required type="email" name="email" id="email" value="">
-                <br>
+                <input class="inputfield" required type="email" name="email" id="email" value="">
                 <!-- phone-->
                 <label for="phone">Contact phone Number</label>
-                <br>
-                <input required type="tel" name="phone" id="phone" value="">
-                <br>
+                <input class="inputfield" required type="tel" name="phone" id="phone" value="">
                 <!-- request type dropdown-->
                 <label for="infotype">Information Type</label>
-                <br>
-                <select required name="infotype" id="infotype">
+                <select class="inputfield" required name="infotype" id="infotype">
                     <option value="" selected hidden>Select an option</option>
                     <option value="company">Company</option>
                     <option value="mineral">Mineral</option>
                     <option value="equipment">Equipment</option>
 
                 </select>
-                <br>
                 <!-- textarea for request body-->
                 <label for="request">Request Description</label>
-                <br>
-                <textarea name="request" id="request"></textarea>
-                <br>
+                <textarea class="inputfield" name="request" id="request"></textarea>
                 <!-- submit button -->
                 <br>
-                <input type="submit" class="submit" value="Submit Request">
+                <div>
+                    <input type="submit" class="button" value="Submit Request">
+
+                    <!-- Goto requests without submitting -->
+                    <input type="button" class="button" value="View Requests"
+                        onclick="window.location.href='requests.php'">
+                </div>
             </form>
         </main>
     </div>

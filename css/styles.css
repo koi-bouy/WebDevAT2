@@ -112,7 +112,12 @@ nav {
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-color: #c8ffdf99;
+}
+
+body {
+    width: 100vw;
 }
 
 
@@ -129,7 +134,7 @@ aside {
 }
 
 main {
-    flex-basis: 80vw;
+    flex: 80vw;
     border-color: cyan;
 }
 
@@ -180,35 +185,38 @@ ul {
     padding-bottom: 1vw;
 }
 
-/* styling for the company table */
-.companies {
+/* styling for tables */
+table.striped,
+.striped td {
+    border-collapse: collapse;
     border: 1px solid green;
 }
 
 
-.companies tr:nth-child(even) {
+
+
+.striped tr:nth-child(even) {
     background-color: lightgreen;
 }
 
-.companies tr:nth-child(odd) {
+.striped tr:nth-child(odd) {
     background-color: lightblue;
 }
 
-.companies td {
+.striped td {
     padding: 0px 0.25vw;
 }
 
-.companies td:hover {
+.striped td:hover {
     background-color: #77454540;
 }
 
-.companies th {
+.striped th {
     padding: 0.5vw;
     background-color: green;
     color: white;
     text-align: left;
-
-
+    border: 1px solid palegreen;
 }
 
 /* custom source link */
@@ -272,7 +280,8 @@ video {
     }
 }
 
-input[type="submit"]:hover {
+/* contact form css */
+input.button:hover {
     cursor: pointer;
     background-color: rgb(197, 236, 197);
 }
@@ -280,4 +289,13 @@ input[type="submit"]:hover {
 form * {
     padding: 3px;
     border: 300;
+}
+
+#err {
+    color: red;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
