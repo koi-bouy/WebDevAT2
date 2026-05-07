@@ -69,8 +69,9 @@
                             $stmt = $conn->prepare($sql);
 
                             if ($stmt->execute([$requestor, $email, $phone, $infotype, $request]) === TRUE) {
+                                echo "<strong style='color:green;'>Request Submitted Successfully!</strong>";
                             } else {
-                                echo "<tr><td>Unable to Insert Error</td></tr>";
+                                echo "<strong style='color:red;'>Unable to Insert Error</strong>";
                             }
                         }
 
@@ -89,12 +90,12 @@
 
                                 echo "
                         <tr>
-                        <td>" . $row["requestid"] . "</td>
-                        <td>" . $row["requestor"] . "</td>
-                        <td>" . $row["email"] . "</td>
-                        <td>" . $row["phone"] . "</td>
-                        <td>" . $row["infotype"] . "</td>
-                        <td>" . $row["request"] . "</td>            
+                        <td>" . htmlspecialchars($row["requestid"]) . "</td>
+                        <td>" . htmlspecialchars($row["requestor"]) . "</td>
+                        <td>" . htmlspecialchars($row["email"]) . "</td>
+                        <td>" . htmlspecialchars($row["phone"]) . "</td>
+                        <td>" . htmlspecialchars($row["infotype"]) . "</td>
+                        <td>" . htmlspecialchars($row["request"]) . "</td>            
                         </tr>
                         ";
                             }
