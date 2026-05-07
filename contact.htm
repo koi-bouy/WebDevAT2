@@ -14,13 +14,13 @@
     <script>
         function validate(e) {
             const input = e.target;
-            const text = input.value.trim();
+            const text = input.value = input.value.trim();
             const injection = /<\s*(?:\/\s*)?script\s*?(?:\s[^>]*)?>/i;
 
             if (text === "") {
                 input.setCustomValidity("Please fill out this field.");
             } else if (injection.test(text)) {
-                input.setCustomValidity("Oi! No <script> injections!");
+                input.setCustomValidity("Oi! No <script> tags!");
             }
             else {
                 input.setCustomValidity("");
@@ -49,21 +49,21 @@
     <div class="container">
         <!-- Centers the company table on the page. -->
         <main class="center">
-            <form onsubmit="validateInput(event)" action="requests.php" method="post">
+            <form action="requests.php" method="post">
                 <span id="err"></span>
                 <!-- Input fields -->
                 <!-- name -->
                 <label for="requestor">Surname and other names</label>
-                <input oninput="validate(event)" type="text" name="requestor" id="requestor" value="">
+                <input required onchange="validate(event)" type="text" name="requestor" id="requestor" value="">
                 <!-- email -->
                 <label for="email">Contact email Address</label>
-                <input oninput="validate(event)" type="email" name="email" id="email" value="">
+                <input required onchange="validate(event)" type="email" name="email" id="email" value="">
                 <!-- phone-->
                 <label for="phone">Contact phone Number</label>
-                <input oninput="validate(event)" type="tel" name="phone" id="phone" value="">
+                <input required onchange="validate(event)" type="tel" name="phone" id="phone" value="">
                 <!-- request type dropdown-->
                 <label for="infotype">Information Type</label>
-                <select oninput="validate(event)" name="infotype" id="infotype">
+                <select required onchange="validate(event)" name="infotype" id="infotype">
                     <option value="" selected hidden>Select an option</option>
                     <option value="company">Company</option>
                     <option value="mineral">Mineral</option>
@@ -72,7 +72,7 @@
                 </select>
                 <!-- textarea for request body-->
                 <label for="request">Request Description</label>
-                <textarea oninput="val(event)" name="request" id="request"></textarea>
+                <textarea required onchange="validate(event)" name="request" id="request"></textarea>
                 <!-- submit button -->
                 <br>
                 <div>
